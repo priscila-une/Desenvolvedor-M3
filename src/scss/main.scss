@@ -1,1 +1,243 @@
 @import "reset";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+$azul: #00C0EE;
+$preto: #000000;
+$branco: #ffffff;
+$cinza: #666666;
+$cinza-escuro:#333333;
+$font-family: 'Open Sans';
+
+html{
+    font-family: $font-family;
+    
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 10%;
+    border-bottom: 1px solid $cinza;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    padding-top: 40px;
+    
+    #mobileTitle{
+        display: none;
+    }
+    .mobile{
+        display: none;
+        
+        
+        h2{
+            font-size: 1.5em;
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            background-color: $branco;
+            color: $cinza;
+            font-size: 1.5em;
+            border: 1px solid $cinza;
+        }
+    }
+    
+    aside{
+        width: 50%;
+        padding: 40px;
+        margin-left: 10px;
+        
+        h2{
+            font-size: 2em;
+        }
+    
+        .content{
+            margin: 10px 0;    
+            h3{
+                color: $cinza-escuro;
+                font-size: 1em;
+                padding: 15px 0;
+            }
+
+            input{
+                width: 16px;
+                height: 16px;
+            }
+
+            label{
+                display: block;
+            }
+            #allColors{
+                border: none;
+                background-color: $branco;
+                color: $cinza;
+                text-decoration: underline;
+                padding: 20px 0;
+                cursor: pointer;
+            }
+            #moreColors{
+                display: none;
+            }
+            #sizeContainer{
+                max-width: 120px;
+            }
+            .containerSize{
+                width: 25px;
+                height: 25px;
+                border: 1px solid $cinza;
+                display: inline-block;
+                
+                .active, :hover{
+                    border: 2px solid $azul;
+                    font-weight: bold;
+                }
+
+                p{
+                    font-size: 1em;
+                    text-align: center;
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+    #select{
+        width: 140px;
+        height: 50px;
+        float: right;
+        margin-right: 100px;
+        
+    }
+    
+    .products{
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .productsList{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+
+        .productItem{
+            width: 250px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h4{
+                text-transform: uppercase;
+                font-size: 1em;
+                padding: 10px;
+            }
+            strong{
+                font-weight: bold;
+                padding: 5px;
+            }
+            p{
+                color: $cinza;
+                padding: 10px;
+            }
+            button{
+                width: 100%;
+                background-color: $preto;
+                color: $branco;
+                height: 30px;
+                font-size: 1em;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+    #loadMore{
+        width: 250px;
+        background-color: $azul;
+        color: $branco;
+        height: 35px;
+        font-size: 1.2em;
+        margin: 30px auto;
+        border: none;
+        box-shadow: (5px 5px  rgba(0, 0, 0, 0.5));
+    
+    }
+}
+
+footer{
+    background-color: $preto;
+    color: $branco;
+    text-align: center;
+    padding-top: 20px;
+    height: 30px;
+    margin-top: 40px;
+
+    p{
+        font-size: 0.8em;
+    }
+}
+
+
+
+/*  responsive */
+
+@media only screen and (max-width: 426px)  {
+
+    main{
+        display: flex;
+        flex-direction: column;
+        
+        #mobileTitle{
+            display: block;
+            text-align: center;
+            font-size: 1.5em;
+            padding-bottom: 20px;
+        }
+        .mobile{
+            display: flex;
+            padding: 10px;
+
+            #select-mobile{
+                position: relative;
+                bottom: -80px;
+                right: 100px;
+                display: none;
+                
+            }
+
+        }
+        
+        aside{
+            display: none;
+            position: relative;
+            top: 0;
+            left: 50px;
+            h2{
+                display: none;
+            }
+            
+            .content{  
+                .sub-title{
+                    font-size: 2em;
+                    color: $cinza;
+                    
+                }
+                
+                .subcontent{
+                    display: none;
+                }
+            }
+            
+
+        }
+       
+        #select{
+            display: none;
+        }
+
+        
+    }
+}

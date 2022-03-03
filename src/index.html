@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -11,9 +11,152 @@
 
 <body>
 
-</body>
-<h1>Desafio m3</h1>
+<header>
+    <img src="./img/logo-m3.png" alt="Logo da M3">
+    <img src="./img/icon.png" alt="bag">
+</header>
+<main>
+  <h2 id="mobileTitle">Blusas</h2>
+  <div class="mobile">
+    <button class="filtrar">Filtrar</button>
+    <button class="ordenar">Ordenar</button>
+    <select id="select-mobile">
+      <option value="ordenar">Ordenar por: </option>
+      <option value="recentes">Mais recentes</option>
+      <option value="menorPreco">Menor Preço</option>
+      <option value="maiorPreco">Maior Preco</option>
+   </select>  
+  </div>  
+  <aside>
+    <h2>Blusas</h2>
+    
+    <div id="colors" class="content">
+      <h3 class="sub-title">CORES</h3>
+      <div class="subcontent ">
+          <label for="amarelo">
+            <input type="checkbox" id="amarelo" name="cor" value="Amarelo">
+            Amarelo
+          </label>
+          <label for="azul">
+            <input type="checkbox" id="azul" name="cor" value="Azul">
+            Azul
+          </label>
+          <label for="branco">
+            <input type="checkbox" id="branco" name="cor" value="Branco"> 
+            Branco
+          </label>
+          <label for="cinza">
+            <input type="checkbox" id="cinza" name="cor" value="Cinza"> 
+            Cinza
+          </label>
+          <label for="laranja">
+            <input type="checkbox" id="laranja" name="cor" value="Laranja">
+            Laranja
+          </label>
+          <button id="allColors"> Ver todas as cores </button>
+          <div id="moreColors">
+            
+            <label for="verde">
+              <input type="checkbox" id="verde" name="cor" value="Verde"> 
+              Verde
+            </label>
+            <label for="vermelho">
+              <input type="checkbox" id="vermelho" name="cor" value="Vermelho"> 
+              Vermelho
+            </label>
+            <label for="preto">
+              <input type="checkbox" id="preto" name="cor" value="Preto"> 
+              Preto
+            </label>
+            <label for="rosa">
+              <input type="checkbox" id="rosa" name="cor" value="Rosa"> 
+              Rosa
+            </label>
+            <label for="vinho">
+              <input type="checkbox" id="vinho" name="cor" value="Vinho">
+              Vinho
+            </label>
+          </div>
+      </div>
+    </div>
+    <div id="sizes" class="content">
+      <h3 class="sub-title">TAMANHOS</h3>
+      <div id="sizeContainer" class="subcontent">
+        <div class="containerSize active" data-size="P" >
+          <p>P</p>
+        </div>
+        <div class="containerSize" data-size="M">
+          <p>M</p>
+        </div>
+        <div class="containerSize" data-size="G">
+          <p>G</p>
+        </div>
+        <div class="containerSize" data-size="GG">
+          <p>GG</p>
+        </div>
+        <div class="containerSize" data-size="U">
+          <p>U</p>
+        </div>
+        <div class="containerSize" data-size="36">
+          <p>36</p>
+        </div>
+        <div class="containerSize" data-size="38">
+          <p>38</p>
+        </div>
+        <div class="containerSize" data-size="40">
+          <p>40</p>
+        </div>
+      </div>
+    </div>
+    <div id="preco" class="content">
+      <h3 class="sub-title">FAIXA DE PREÇO</h3>
+      <div class="subcontent">
+        <label for="0-50">
+          <input type="checkbox" id="0-50">
+          de R$0 até R$50
+        </label>
+        <label for="51-150">
+          <input type="checkbox" id="51-150">
+          de R$51 até R$150
+        </label>
+        <label for="151-300">
+          <input type="checkbox" id="151-300">
+          de R$151 até R$300
+        </label>
+        <label for="301-500">
+          <input type="checkbox" id="301-500">
+          de R$301 até R$500
+        </label>
+        <label for="500mais">
+          <input type="checkbox" id="500mais">
+          a partir de R$500
+        </label>
+      
+    </div>
+  </aside>
+  <section class="products">
+    <ul class="productsList">
+      <li class="productItem" data-id="" data-color="" data-size="" data-date="">
+        <img src="" alt="">
+        <h4></h4>
+        <strong>R$ </strong>
+        <p>até  de R$ </p>
+        <button>Comprar</button>
+      </li>
+    </ul>
+    <button id="loadMore"> Carregar Mais </button>
+   </section>
 
+  <select id="select">
+      <option value="ordenar">Ordenar por: </option>
+      <option value="recentes">Mais recentes</option>
+      <option value="menorPreco">Menor Preço</option>
+      <option value="maiorPreco">Maior Preco</option>
+   </select>  
+</main>
+<footer>
+  <p>M3: IMPLANTAÇÃO DE E-COMMERCE VTEX</p>
+</footer>
 <script src="bundle.js"></script>
-
+</body>
 </html>
